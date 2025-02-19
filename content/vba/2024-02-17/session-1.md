@@ -8,7 +8,9 @@ students:
 
 ## Qu'est-ce que VBA ?
 
-VBA (Visual Basic for Applications) est un langage de programmation orienté objet intégré à Microsoft Office, principalement utilisé pour automatiser des tâches répétitives dans Excel, Word et Access. Il permet de créer des macros, d'interagir avec les objets des applications Office et d'améliorer l'efficacité des processus de travail.
+VBA (Visual Basic for Applications) est un langage de programmation orienté objet intégré à Microsoft Office.
+VBA est principalement utilisé pour automatiser des tâches répétitives dans Excel, Word et Access.
+VBA permet de créer des macros, d'interagir avec les objets des applications Office et d'améliorer l'efficacité des processus de travail.
 
 ### Pourquoi utiliser VBA ?
 
@@ -29,46 +31,35 @@ VBA (Visual Basic for Applications) est un langage de programmation orienté obj
 
 ## Terminologies importantes
 
-### Macro
+1. **Macro**
+   Une séquence d'instructions enregistrée dans VBA qui permet d'automatiser des tâches répétitives.
 
-Une macro est une séquence d'instructions enregistrée dans VBA qui permet d'automatiser des tâches répétitives.
+2. **Procédure**
+   Une procédure est un bloc de code VBA exécutant une tâche spécifique. Elle peut être de type Sub (ne retourne pas de valeur) ou Function (retourne une valeur).
 
-### Procédure
+3. **Module**
+   Un conteneur de code VBA où sont stockées les procédures et fonctions. Il peut être standard (Module) ou de classe (Class Module).
 
-Une procédure est un bloc de code VBA exécutant une tâche spécifique. Elle peut être de type **Sub** (ne retourne pas de valeur) ou **Function** (retourne une valeur).
+4. **Objet**
+   Une entité manipulable en VBA, comme une feuille de calcul, une cellule ou un graphique. Chaque objet possède des propriétés et des méthodes.
 
-### Module
+5. **Propriété**
+   Une caractéristique d'un objet (ex. : `Range("A1").Value` donne la valeur de la cellule A1).
 
-Un module est un conteneur de code VBA où sont stockées les procédures et fonctions. Il peut être standard (Module) ou de classe (Class Module).
+6. **Méthode**
+   Une action qu'un objet peut exécuter (ex. : `Range("A1").Select` sélectionne la cellule A1).
 
-### Objet
+7. **Workbook (Classeur)**
+   Représente un fichier Excel. Il contient une ou plusieurs feuilles de calcul (Sheets). Exemple d'accès à un classeur : `Workbooks("MonFichier.xlsx")`.
 
-Un objet est une entité manipulable en VBA, comme une feuille de calcul, une cellule ou un graphique. Chaque objet possède des propriétés et des méthodes.
+8. **Worksheet (Feuille de calcul)**
+   Une feuille spécifique d'un classeur. Exemple d'accès : `Worksheets("Feuil1")` ou `ActiveSheet` pour la feuille active.
 
-### Propriété
+9. **Collection**
+   Un ensemble d'objets similaires regroupés. Par exemple, Workbooks est une collection contenant tous les classeurs ouverts, et Worksheets est une collection contenant toutes les feuilles d'un classeur.
 
-Une propriété est une caractéristique d’un objet (ex. : `Range("A1").Value` donne la valeur de la cellule A1).
-
-### Méthode
-
-Une méthode est une action qu'un objet peut exécuter (ex. : `Range("A1").Select` sélectionne la cellule A1).
-
-### Workbook (Classeur)
-
-Un **Workbook** représente un fichier Excel. Il contient une ou plusieurs feuilles de calcul (**Sheets**). Exemple d'accès à un classeur : `Workbooks("MonFichier.xlsx")`.
-
-### Worksheet (Feuille de calcul)
-
-Une **Worksheet** est une feuille spécifique d'un classeur. Exemple d'accès : `Worksheets("Feuil1")` ou `ActiveSheet` pour la feuille active.
-
-### Collection
-
-Une **Collection** est un ensemble d'objets similaires regroupés. Par exemple, **Workbooks** est une collection contenant tous les classeurs ouverts, et **Worksheets** est une collection contenant toutes les feuilles d'un classeur.
-
-### Range
-
-Un **Range** représente une ou plusieurs cellules dans une feuille de calcul. Exemple : `Range("A1")` fait référence à la cellule A1, tandis que `Range("A1:B2")` sélectionne un ensemble de cellules.
-
+10. **Range**
+    Une ou plusieurs cellules dans une feuille de calcul. Exemple : `Range("A1")` fait référence à la cellule A1, tandis que `Range("A1:B2")` sélectionne un ensemble de cellules.
 ## Premiers pas avec VBA
 
 ### Préparation de l'environnement
