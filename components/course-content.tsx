@@ -32,6 +32,12 @@ const MarkdownComponents: Components = {
       {...props}
     />
   ),
+  h4: (props) => (
+    <h3
+      className="scroll-m-20 text-xl font-semibold tracking-tight mt-6 mb-3"
+      {...props}
+    />
+  ),
   p: (props) => (
     <p className="leading-7 [&:not(:first-child)]:mt-4" {...props} />
   ),

@@ -15,7 +15,7 @@ import {
   getDates,
   getSubjects,
 } from "@/lib/course-utils";
-import { Home, Users } from "lucide-react";
+import { Files, Home } from "lucide-react";
 
 interface Params {
   subject: string;
@@ -77,11 +77,18 @@ const CoursePage = async ({ params }: { params: Promise<Params> }) => {
           <div className="flex items-center justify-between">
             <CardTitle className="text-3xl">{course.metadata.title}</CardTitle>
             <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2">
-                <Users className="h-5 w-5" />
-                <span className="text-sm text-muted-foreground">
-                  {course.metadata.students.length} étudiants
-                </span>
+              <div className="flex flex-col gap-2">
+                <div className="flex gap-2">
+                  <Files className="h-5 w-5" />
+                  <span className="text-sm text-muted-foreground">
+                    Fichiers:
+                  </span>
+                </div>
+                <ul className="flex flex-col gap-2">
+                  {course.metadata.files.map((file, index) => (
+                    <li key={index}><Badge variant="secondary">{file}</Badge></li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>

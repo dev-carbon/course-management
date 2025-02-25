@@ -10,6 +10,7 @@ export interface CourseMeta {
   date: string;
   students: string[];
   sessionNumber: number;
+  files: string[];
 }
 
 export interface Course {
@@ -65,6 +66,7 @@ export function getCourses(subject: string, date: string): Course[] {
             date: format(parse(date, "yyyy-mm-dd", new Date()), "yyyy MMMM dd"),
             students: data.students || [],
             sessionNumber: parseInt(file.split("-")[1].replace(".md", "")),
+            files: data.files || []
           },
           content,
           slug: file.replace(".md", ""),
@@ -87,7 +89,8 @@ export function getCourseContent(subject: string, date: string, session: string)
       title: data.title || 'Untitled',
       date: format(parse(date, 'yyyy-MM-dd', new Date()), 'dd MMMM yyyy'),
       students: data.students || [],
-      sessionNumber: parseInt(session.split('-')[1])
+      sessionNumber: parseInt(session.split('-')[1]),
+      files: data.files || []
     },
     content,
     slug: session
